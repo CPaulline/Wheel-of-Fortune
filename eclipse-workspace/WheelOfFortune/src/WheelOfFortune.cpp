@@ -9,7 +9,12 @@
 #include <iostream>
 using namespace std;
 
+#include "GamePhrases.h"
+
 int main() {
 	cout << "Hello World" << endl; // prints Hello World
-	return 0;
+
+	GamePhrases g;
+	g.GamePhrases(4, "text.txt");
+	g.readFile;
 }

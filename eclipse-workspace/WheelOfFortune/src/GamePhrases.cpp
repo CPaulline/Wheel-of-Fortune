@@ -1,3 +1,6 @@
 #include "GamePhrases.h"
 
-GamePhrases::GamePhrases(string addy)
+GamePhrases::GamePhrases(int s, string fn){
+	string fileName = fn;
+	int size = s;
+}
