@@ -1,3 +1,6 @@
+#ifndef GAMEPHRASES_H_
+#define GAMEPHRASES_H_
+
 #include <string>
 using namespace std;
 
@@ -6,12 +9,13 @@ using namespace std;
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+#include <vector>
 
 class GamePhrases {
 private:
-	string fileName;
 	int size;
-	int list[size];
+	string fileName;
+	vector<string> list;
 
 public:
 	GamePhrases();
@@ -26,15 +30,18 @@ public:
 			cout << "error opening file" << endl;
 			exit(-1);
 		}
+
+		list.reserve(size);
 		string s;
 		int i = 0;
 		while(getline(infile, s)){
-			list[i];
+			list.push_back(s);
 			i++;
 		}
 		cout << "file read successfully" << endl;
-		for(i=0;i<size;i++){
-			cout << list[i] << endl;
+
+		for(i=0;i<list.size();i++){
+			cout<<list.at(i)<< endl;
 		}
 	}
 
@@ -46,3 +53,5 @@ public:
 		return ph;
 	}
 };
+
+#endif /* GAMEPHRASES_H_ */

@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/GamePhrases.cpp \
+../src/GameState.cpp \
 ../src/WheelOfFortune.cpp 
 
 OBJS += \
 ./src/GamePhrases.o \
+./src/GameState.o \
 ./src/WheelOfFortune.o 
 
 CPP_DEPS += \
 ./src/GamePhrases.d \
+./src/GameState.d \
 ./src/WheelOfFortune.d 
 
 
