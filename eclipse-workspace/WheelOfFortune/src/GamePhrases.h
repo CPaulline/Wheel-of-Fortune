@@ -21,9 +21,11 @@ public:
 	GamePhrases();
 	GamePhrases(int s, string fn);
 
+	//various set methods for the variables if needed
 	void setSize(int s){size = s;}
 	void setFileName(string fn){fileName = fn;};
 
+	//reads the file for the phrases to populate the container
 	void readFile(){
 		ifstream infile(fileName);
 		if(!infile){
@@ -39,12 +41,9 @@ public:
 			i++;
 		}
 		cout << "file read successfully" << endl;
-
-		for(i=0;i<list.size();i++){
-			cout<<list.at(i)<< endl;
-		}
 	}
 
+	//picks a random phrase from the file passed in and comes from the container created in readFile()
 	string randPhrase() const{
 		string ph;
 		srand(time(0));
